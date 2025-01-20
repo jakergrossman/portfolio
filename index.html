@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jake Grossman | Embedded Firmware</title>
+		<link href="style.css" rel="stylesheet">
+		<link id="favicon" rel="icon" type="image/png" href="">
+		<script>
+			window.onload = (event) => {
+				const canvas = document.createElement('canvas');
+				const ctx = canvas.getContext('2d');
+
+				// Set the background color
+				const style = window.getComputedStyle(document.querySelector('body'), null);
+				const color = style.getPropertyValue('--background');
+				ctx.fillStyle = color;
+
+				// Draw the rounded square
+				const radius = 32; // Adjust the radius for desired roundness
+				ctx.roundRect(0, 0, canvas.width, canvas.height, radius);
+				ctx.fill();
+
+				// Convert the canvas to a data URL
+				const dataURL = canvas.toDataURL();
+
+				// Set the favicon
+				const favicon = document.getElementById('favicon');
+				favicon.rel = 'icon';
+				favicon.href = dataURL;
+			};
+		</script>
+	</head>
+	<body>
+		<div>
+			<h2>Jake Grossman</h2>
+			Embedded Firmware Design
+			<br>
+			Dallas, TX, United States
+			<br>
+			<a href="mailto:work@jakergrossman.com" rel="noreferrer" target="_blank">
+				work@jakergrossman.com
+			</a>
+		</div>
+		<div>
+			<a href="https://github.com/jakergrossman" rel="noreferrer" target="_blank">
+				github/jakergrossman
+			</a>
+			<br>
+			<a href="https://bsky.app/profile/jakergrossman.com" rel="noreferrer" target="_blank">
+				bluesky/jakergrossman.com
+			</a>
+		</div>
+	</body>
+</html>

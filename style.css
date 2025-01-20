@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+
+html {
+	--background: #2D2926;
+	--foreground: #FEFEFE;
+	--highlight: #EA5648;
+
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+
+	color: var(--foreground);
+	background: var(--background);
+	font-family: "Oxygen Mono", monospace;
+	font-size: 1rem;
+
+	width: 50vw;
+	height: 50vh;
+
+	padding: 1rem;
+	border: 1px solid var(--highlight);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+h2 {
+	text-decoration: underline;
+	text-decoration-color: var(--highlight);
+	text-underline-offset: .25em;
+	margin-top: .25em;
+	margin-bottom: .50em;
+}
+
+a, a:visited {
+	color: var(--highlight);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width:600px)  {
+	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+	body {
+		width: 90%;
+		height: 90%;
+
+		margin: 1rem;
+	}
+}
